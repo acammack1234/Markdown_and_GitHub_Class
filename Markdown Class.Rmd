@@ -1,0 +1,73 @@
+---
+title: "Markdown Class"
+author: "MAJ Andrew Cammack"
+date: "12/6/2021"
+output: 
+  html_document:
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r echo=FALSE}
+klippy::klippy()
+
+```
+
+
+# Level 1 Header
+
+## subheader
+
+###### subest of headers
+
+horizontal line
+
+------------------------------------------------------------------------
+
+## text formatting
+
+*italic*
+
+**bold**
+
+~~strikethrough~~
+
+superscript^2^
+
+[google](https://www.google.com)
+
+[underline]{.ul}
+
+| column1 | column2 | column3 |
+|:--------|:-------:|:--------|
+| value1  | value2  | value3  |
+
+| Col1 | Col2 | Col3 |
+|------|------|------|
+| 1    | 5    | 2    |
+|      |      |      |
+|      |      |      |
+
+: Best Table Evah
+
+this is the formula $y = mx+b^2$
+
+see the equation below $$y=mx+b^2$$
+
+ctrl+alt+i
+
+```{r histogram, message=FALSE, warning=FALSE}
+#here we are going to make a plot
+library(tidyverse)
+library(palmerpenguins)
+data("penguins")
+
+penguins %>% ggplot(aes(x = flipper_length_mm)) + geom_histogram()
+```
+
+klippy allows you to add a clipboard icon to any code chunk
+
+
